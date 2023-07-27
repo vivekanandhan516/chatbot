@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Board</title>
+</head>
+<body>
+        <form  method="post">{% csrf_token %}
+                <p>      {% if user.is_authenticated %}
+                        Welcome {{ user.first_name }}  
+                {% endif %}</p>
+                 <input type="text" name="message" placeholder="enter message">
+                 <input type="submit"  value="submit" />
+    </form>
+  
+</P>
+<A href="{% url 'register' %}">Logout</A>
+</body>
+</html>
+

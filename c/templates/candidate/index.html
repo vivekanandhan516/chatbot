@@ -1,0 +1,30 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - #codevember 04/2016 - Chat box</title>
+  <link rel="stylesheet" href="/static/user/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="chat-box">
+  <header>
+    {% if user.is_authenticated %}
+     {{ user.username }}       
+    {% endif %}
+    <span style="flex:1"></span>
+    <span class="close-button">X</span>
+  </header>
+  <section id="message-list">
+  </section>
+  <footer>
+    <input id="message-input" type="text" placeholder="Type a message...">
+  </footer>
+</div>
+<!-- partial -->
+  <script  src="/static/js/scripts.js"></script>
+
+</body>
+</html>
